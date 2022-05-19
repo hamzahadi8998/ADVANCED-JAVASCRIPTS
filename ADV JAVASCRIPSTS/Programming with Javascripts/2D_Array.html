@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Dimisional(2D_Array)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            background-color: plum;
+        }
+        table{
+            margin-left: 30%;
+            padding: 10px;
+
+        }
+        h1{
+            padding: 20px;
+        }
+        td{
+            padding: 3px;
+            font-size: 15px;
+           
+        }
+        h2{
+            text-align: center;
+            font-size: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <!-- Multi-Dimisional(2D_Array) -->
+    <h1 style="text-align: center;">Students Data</h1>
+    <script>
+        // Multi-Dimensional Array
+        var students = [
+                                   
+            ["Ayan",23,"ayan22@gmail.com",45.5,"Karachi,Pakistan"],
+           ["Faraz",25,"faraz27@gmail.com",47.5,"Karachi,Pakistan"],
+            ["Arqam",26,"arqam22@gmail.com",40.5,"Karachi,Pakistan"],
+            ["Sarim",20,"sarim22@gmail.com",41.5,"Karachi,Pakistan"],
+            ["Nabeel",22,"nabeel22@gmail.com",41.5,"Karachi,Pakistan"],
+            ["Nabeel",22,"nabeel22@gmail.com",41.5,"Karachi,Pakistan"],
+            ["Nabeel",22,"nabeel22@gmail.com",41.5,"Karachi,Pakistan"],
+            ["Nabeel",22,"nabeel22@gmail.com",41.5,"Karachi,Pakistan"],
+            ["Nabeel",22,"nabeel22@gmail.com",41.5,"Karachi,Pakistan"],
+            ["Nabeel",22,"nabeel22@gmail.com",41.5,"Karachi,Pakistan"],
+            ["Nabeel",22,"nabeel22@gmail.com",41.5,"Karachi,Pakistan"],
+            ["Nabeel",22,"nabeel22@gmail.com",41.5,"Karachi,Pakistan"],
+            ["Nabeel",22,"nabeel22@gmail.com",41.5,"Karachi,Pakistan"],
+            ["Ayan",23,"ayan22@gmail.com",45.5,"Karachi,Pakistan"],
+
+        ];
+        document.write("<h2>"+students.length +"</h2>");
+       
+        document.write("<table border = '2px'>");
+            document.write("<tr>");
+        for (var a=0; a < students.length;a++){
+
+            for (var b =0;b<students[a].length;b++){
+
+                document.write("<td>"+students[a][b]+"</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+    </script>
+</body>
+</html>

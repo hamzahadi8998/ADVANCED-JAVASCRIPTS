@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Login Form</h1>
+    <input type="text" id="txtuser" placeholder="Enter your name">
+    <input type="text" id="txtpass" placeholder="Enter your password">
+    <button onclick="Login()">Login</button>
+
+    <script>
+        function Login()
+        
+        {
+            var myuser = document.getElementById("txtuser").value;
+            var mypass = document.getElementById("txtpass").value;
+            for(var i = 0;i<=localStorage.length; i++)
+            {
+            
+                var localuser = localStorage.getItem("username" +i);
+                var localpass = localStorage.getItem("password"+i);
+
+                if(localuser==myuser && localpass==mypass)
+                {
+                    alert("Login successfully")
+                  break;
+                  
+                }
+                else if(localuser!=myuser && localpass!=mypass)
+                {
+                    continue;
+                }
+               
+                else
+                {
+                    alert("go Register First");
+                }
+            }
+        }
+            </script>
+
+
+    
+</body>
+</html>

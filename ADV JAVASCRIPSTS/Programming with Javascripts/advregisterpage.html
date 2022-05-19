@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <h1 style="text-align: center;">Registration Form</h1>
+        <input type="text" placeholder="Enter Your Name" id="txtuser">
+        <input type="text" placeholder="Enter Your Password" id="txtpass">
+        <button onclick="Register()">Register</button>
+        <script>
+          var usercount = 1;
+          var userpass = 1;
+    
+    
+            function Register()
+            {
+                var myuser = document.getElementById("txtuser").value;
+                var mypass = document.getElementById("txtpass").value;
+    
+                localStorage.setItem("username"+usercount ,myuser);
+                localStorage.setItem("password"+userpass ,mypass);
+    
+             usercount++;
+             userpass++;
+            }
+    
+            //   localStorage.clear();
+        </script>
+    </body>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:  'Poppins', sans-serif;  
+        }
+        body{
+            background-color:thistle;
+        }
+        h1
+        {
+            padding: 40px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .form
+        {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 90px;
+        }
+        form input{
+            padding: 12px;
+            border:2px solid black;
+
+        }
+        form input[type=button]{
+            background-color: teal;
+            color: black;
+        }
+        form input:hover{
+            box-shadow: 1px 1px 0px 1px teal;
+        }
+        .table
+        {
+            width: 100%;
+        }
+        table{
+            width: 70%;
+            margin: auto;
+            outline: none;
+            border-collapse: collapse;
+
+        }
+        thead th{
+            background: black;
+            color: white;
+            text-transform: uppercase;
+        }
+        td{
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+            text-transform: uppercase;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Students Data</h1>
+    <!-- Dynamic_Table_Array(proper work) -->
+    <div class="form">
+        <form action="">
+            <input type="text" placeholder="Enter Your Name" id="txtname" >
+            <input type="number" placeholder="Enter Your Age" id="txtage" >
+            <input type="text" placeholder="Enter Your Email" id="txtemail" >
+            <input type="text" placeholder="Enter Your Phone Number" id="txtnum">
+            <input type="button" value="Add" onclick="Adddata()">
+        </form>
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function Adddata(){
+            var txtname = document.getElementById("txtname").value;
+            var txtage = document.getElementById("txtage").value;
+            var txtemail = document.getElementById("txtemail").value;
+            var txtnum = document.getElementById("txtnum").value;
+
+            // Making empty Array
+            var std_name = [];
+            var std_age =[];
+            var std_email =[];
+            var std_num =[];
+
+            // Push data
+            std_name.push(txtname);
+            std_age.push(txtage);
+            std_email.push(txtemail);
+            std_num.push(txtnum);
+
+            document.getElementById("tbody").innerHTML += "<tr><td>" + std_name + "</td><td>"+
+                std_age +"</td><td>"+ std_email + "</td><td>"+ std_num +"</td></tr>";
+
+                emptytextbox();
+
+        }
+       function emptytextbox(){
+             document.getElementById("txtname").value="";
+             document.getElementById("txtage").value="";
+             document.getElementById("txtemail").value="";
+             document.getElementById("txtnum").value="";
+
+        }
+    </script>
+</body>
+</html>

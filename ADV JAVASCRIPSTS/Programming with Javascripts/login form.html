@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Login Form</h1>
+    <input type="text" id="txtuser" placeholder="Enter your name">
+    <input type="text" id="txtpass" placeholder="Enter your password">
+    <button onclick="Login()">Login</button>
+    
+    <script>
+        function Login()
+        {
+            var myuser = document.getElementById("txtuser").value;
+            var mypass = document.getElementById("txtpass").value;
+
+            localStorage.setItem("username", myuser);
+            localStorage.setItem("password",mypass);
+
+        }
+        
+
+        
+    </script>
+
+    
+</body>
+</html>
